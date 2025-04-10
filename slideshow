@@ -2,127 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>EU-India Potential Slideshow</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EU-India Relationship Slideshow</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #333333;
+      --bg-dark: #1e1e1e;
+      --text-dark: #f0f0f0;
+      --primary: #0057b7;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+      }
+
+      .slide {
+        background-color: #2c2c2c;
+        color: var(--text-dark);
+      }
+
+      .dot {
+        background-color: #555;
+      }
+
+      .active {
+        background-color: #ffd700;
+      }
+    }
+
     .slideshow-container {
-      max-width: 800px;
+      max-width: 90%;
       margin: 40px auto;
       position: relative;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 12px;
       overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
+
     .slide {
       display: none;
-      padding: 40px;
+      padding: 40px 20px;
       text-align: center;
+      background-color: #fff;
+      transition: background-color 0.3s;
     }
+
     .slide h2 {
-      font-size: 28px;
-      color: #002f6c;
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: var(--primary);
     }
+
     .slide p {
       font-size: 18px;
-      color: #333;
+      margin-top: 10px;
     }
-    .active {
-      display: block;
+
+    .flag {
+      font-size: 28px;
+      margin-right: 10px;
+      vertical-align: middle;
     }
-    .nav-buttons {
+
+    .dots {
       text-align: center;
-      margin: 20px;
+      margin-top: 10px;
     }
-    .nav-buttons button {
-      padding: 10px 20px;
-      margin: 5px;
-      border: none;
-      background-color: #002f6c;
-      color: white;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s;
     }
-    .nav-buttons button:hover {
-      background-color: #004a99;
+
+    .active {
+      background-color: #0057b7;
+    }
+
+    @media (max-width: 600px) {
+      .slide h2 {
+        font-size: 22px;
+      }
+      .slide p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="slideshow-container">
-    <div class="slide active">
-      <h2>🌍 EU-India: A Strategic Partnership for the Future</h2>
-      <p>Bridging two vibrant democracies through trade, technology, sustainability, and shared values.</p>
-    </div>
-    <div class="slide">
-      <h2>📈 €120 Billion+ in Bilateral Trade</h2>
-      <p>The EU is India’s second-largest trading partner. A balanced FTA can unlock billions in potential.</p>
-    </div>
-    <div class="slide">
-      <h2>💡 Tech Synergies Driving the Digital Decade</h2>
-      <p>AI, 5G, cybersecurity, green tech and DPI are reshaping future-ready economies.</p>
-    </div>
-    <div class="slide">
-      <h2>🌱 Green Partnerships for a Greener Tomorrow</h2>
-      <p>Shared goals in circular economy, clean energy, and climate finance are driving joint impact.</p>
-    </div>
-    <div class="slide">
-      <h2>🎓 Knowledge Without Borders</h2>
-      <p>From Erasmus+ to skill development, youth and academic exchange shape future collaboration.</p>
-    </div>
-    <div class="slide">
-      <h2>💊 Joint Research, Stronger Health Systems</h2>
-      <p>Vaccines, biopharma innovation, and preparedness have brought India and EU closer.</p>
-    </div>
-    <div class="slide">
-      <h2>🏢 Small Businesses, Big Impact</h2>
-      <p>EU-India corridor supports thousands of MSMEs through knowledge and market access.</p>
-    </div>
-    <div class="slide">
-      <h2>🤝 Shared Values, Global Influence</h2>
-      <p>Democracy, rule of law, and multilateralism form the bedrock of EU-India diplomacy.</p>
-    </div>
-    <div class="slide">
-      <h2>🎭 A Rich Tapestry of Heritage</h2>
-      <p>From cinema to cuisine – EU and India celebrate centuries of cultural exchange.</p>
-    </div>
-    <div class="slide">
-      <h2>🚀 From Dialogue to Action</h2>
-      <p>FTA, digital partnerships, and sustainability frameworks point to a transformative future.</p>
-    </div>
-    <div class="slide">
-      <h2>📣 Be Part of the EU-India Story</h2>
-      <p>Policymakers, entrepreneurs, academics – stay informed with Europe India Journal.</p>
-    </div>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-goinghigher.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="slideshow-container">
+  <div class="slide fade">
+    <h2><span class="flag">🇮🇳</span>Strategic Partnerships<span class="flag">🇪🇺</span></h2>
+    <p>EU and India collaborate on defense, diplomacy, and global governance.</p>
   </div>
 
-  <div class="nav-buttons">
-    <button onclick="prevSlide()">Previous</button>
-    <button onclick="nextSlide()">Next</button>
+  <div class="slide fade">
+    <h2><span class="flag">🇮🇳</span>Trade & Investment<span class="flag">🇪🇺</span></h2>
+    <p>Bilateral trade exceeds €120 billion annually with growing FDI flows.</p>
   </div>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
+  <div class="slide fade">
+    <h2><span class="flag">🇮🇳</span>Innovation & Technology<span class="flag">🇪🇺</span></h2>
+    <p>Joint focus on digital infrastructure, AI, and 5G development.</p>
+  </div>
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
+  <div class="slide fade">
+    <h2><span class="flag">🇮🇳</span>Climate & Sustainability<span class="flag">🇪🇺</span></h2>
+    <p>Cooperation on clean energy, green finance, and climate change goals.</p>
+  </div>
+
+  <div class="slide fade">
+    <h2><span class="flag">🇮🇳</span>Education & Research<span class="flag">🇪🇺</span></h2>
+    <p>Thousands of Indian students in EU; joint academic and R&D projects.</p>
+  </div>
+
+  <div class="slide fade">
+    <h2><span class="flag">🇮🇳</span>Healthcare & Biotech<span class="flag">🇪🇺</span></h2>
+    <p>EU-India synergy in pharma, vaccines, and biotech innovations.</p>
+  </div>
+
+  <div class="slide fade">
+    <h2><span class="flag">🇮🇳</span>Mobility & Talent<span class="flag">🇪🇺</span></h2>
+    <p>Focus on migration pathways and skilled professional exchange.</p>
+  </div>
+
+  <div class="slide fade">
+    <h2><span class="flag">🇮🇳</span>Digital Economy<span class="flag">🇪🇺</span></h2>
+    <p>EU-India dialogue on data governance, cybersecurity, and e-commerce.</p>
+  </div>
+</div>
+
+<div class="dots">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
     }
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
     }
 
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-  </script>
+    slides[slideIndex - 1].style.display = "block";  
+    dots[slideIndex - 1].classList.add("active");
+    setTimeout(showSlides, 4000); // 4 seconds
+  }
+</script>
+
 </body>
 </html>
